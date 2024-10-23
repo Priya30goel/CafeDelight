@@ -1,0 +1,179 @@
+/* Basic Reset */
+body, h2, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    color: rgb(243, 239, 239);
+    text-align: center;
+    display: flex;
+    justify-content: flex-end; /* Aligns heading to the start (top) */
+    align-items: flex-start; /* Aligns heading to the start (left) */
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content h1 {
+    font-size: 4em;
+    margin: 5;
+    margin-top: 170px; /* Moves the heading down */
+    margin-left: 30px; /* Moves the heading to the right */
+}
+
+.content p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+    height: 100vh; /* Full viewport height */}
+
+
+/* Login Container */
+.login-container {
+    margin-left:auto;
+    margin-right:0;
+    width:300px;
+    padding:20px;
+    position: absolute;
+    left: 750px; /* Moves container 20px from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically by offsetting half its height */
+    /* Optional: Add styling for your login container */
+    border-radius: 5px;
+    box_shallow:0 0 10px rgba(0,0,0,0.1)
+}
+
+/* Login Form Styling */
+.login-form {
+    background-color: #2d080830; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Max width of the form */
+}
+
+/* Title Styling */
+.login-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #d4c4c4; /* Dark gray text color */
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label Styling */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Dark gray text color */
+}
+
+/* Input Field Styling */
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #1a0303;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f6f5efe6; /* Bootstrap primary blue */
+    color: rgb(31, 3, 3);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:#f8c94d;
+}
+
+.forgot-password-btn {
+    background-color: #2d080830;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.forgot-password-btn:hover {
+    background-color:#f8c94d;
+    color: rgb(31, 3, 3);
+}
+.sign-up-btn{
+    background-color: #2d080830;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px 0; 
+}
+
+.sign-up-btn:hover {
+    background-color: #f8c94d;
+    color: rgb(31, 3, 3);
+}
+.flex-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns child elements to the right */
+    height: 100vh; /* Optional: Full viewport height */
+    align-items: center; /* Center items vertically */
+}
+

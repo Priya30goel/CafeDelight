@@ -1,0 +1,22 @@
+function getGreeting() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting;
+
+    if (hour < 12) {
+        greeting = "Good Morning!";
+    } else if (hour < 18) {
+        greeting = "Good Afternoon!";
+    } else if (hour < 22) {
+        greeting = "Good Evening!";
+    } else {
+        greeting = "Good Night!";
+    }
+
+    return greeting;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const greetingElement = document.getElementById('greeting');
+    greetingElement.textContent = getGreeting(); // Set the greeting message
+});

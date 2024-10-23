@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Delight</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+  .countdown {
+            text-align: center;
+            background-color: #030303;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+   
+        .countdown-timer {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .countdown-timer span {
+            display: inline-block;
+            width: 70px;
+        }
+
+        .countdown-labels {
+            margin-top: 10px;
+        }
+
+        .countdown-labels span {
+            display: inline-block;
+            width: 70px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+
+        .sort-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    
+  .navbar {
+    background-color: #000 !important; 
+}
+.navbar-brand, .nav-link {
+    color: #fff !important; 
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.nav-link.active {
+    color: #f8c94d !important;
+}
+.nav-link:hover {
+    color: #f8c94d !important; 
+}
+.navbar-brand img {
+    height: 50px; 
+    width: auto;  
+    margin-right: 10px;
+    border-radius: 50%; 
+}
+.highlight-underline {
+            background-color: #010101; /* Bright yellow background */
+            text-decoration: thin underline; /* Underline the text */
+            padding: 10px; /* Add padding around the text */
+            border-radius: 5px; /* Rounded corners */
+        }
+.carousel-inner img{
+    width: 100%;
+    height: 100vh;
+}
+h1,h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.fixed-size-img{
+    width: 100%;
+    height:300px;
+    object-fit: cover;
+}
+.img-thumbnail {
+    max-width: 100%;
+  }
+body{
+    background-color: black;
+    color:white;
+}
+
+</style>
+
+<body>
+  <header id="home">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 border-bottom fixed-top ">
+
+      <div class="container-fluid">
+        <a class="navbar-brand fs-2" href="#">
+          <img src="logo.png">
+          CAFE DELIGHT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#home" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#order">Order </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offer">Special Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="upcomingevents.html">Upcoming events</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://cdn.pixabay.com/photo/2017/08/07/07/06/coffeehouse-2600877_640.jpg" class="d-block w-100"
+            alt="...">
+          <div class="carousel-caption d-md-block">
+            <h2>WELCOME</h2>
+            <h2>Amazing taste and beautiful place.</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn.pixabay.com/photo/2021/12/07/19/41/roasted-coffee-6853956_1280.jpg"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block">
+            <h2>WELCOME</h2>
+            <h2>Feel the best experience ever.</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn.pixabay.com/photo/2016/08/09/13/21/coffee-1580595_1280.jpg" class="d-block w-100"
+            alt="...">
+          <div class="carousel-caption d-md-block">
+            <h2>WELCOME</h2>
+            <h2>Creamy,tasty and ready to serve.</h2>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <section class="offer my-5" id="offer">
+  <div class="container">
+    <div>
+      <h1 class="container text-center">Special Offers</h1>
+      <hr class="w-25 m-auto">
+    </div>
+   
+    
+       
+    <div class="container text-center mt-5">
+      <h1 class="highlight-underline">ONGOING OFFERS</h1>
+      <div class="countdown">
+        <h1>Limited-Time Discount Offer</h1>
+        <div class="countdown-timer" id="countdown-timer">
+            <span id="days">00</span> : 
+            <span id="hours">00</span> : 
+            <span id="minutes">00</span> : 
+            <span id="seconds">00</span>
+        </div>
+        <div class="countdown-labels">
+            <span>Days</span>
+            <span>Hours</span>
+            <span>Minutes</span>
+            <span>Seconds</span>
+        </div>
+    </div>
+      
+    
+      <img src="https://png.pngtree.com/png-clipart/20210801/original/pngtree-cafe-discount-promotions-png-image_6573572.jpg" 
+           class="img-fluid" alt="Special Offers Image" style="cursor: pointer;" 
+           data-bs-toggle="modal" data-bs-target="#largeOfferModal">
+  </div>
+
+ <!-- Large Modal -->
+<div class="modal fade" id="largeOfferModal" tabindex="-1" aria-labelledby="largeOfferModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Large modal class here -->
+      <div class="modal-content bg-light text-dark"> <!-- Add background and text color -->
+          <div class="modal-header">
+              <h5 class="modal-title" id="largeOfferModalLabel">Today's Special Offer</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-4"> <!-- Add padding -->
+              <h2 class="display-4 fw-bold">Buy 2 Get 1 Free on All Coffees!</h2>
+              <p class="lead">Come enjoy our delicious coffee, and for today only, get a free coffee with every purchase!</p>
+              
+              <!-- Image showcasing the special offer -->
+              <img src="https://www.shutterstock.com/image-vector/coffee-go-2-plus-1-260nw-789454579.jpg" class="img-fluid mt-3 mb-3 rounded" alt="Special Offer Image"> <!-- Rounded image -->
+
+              <!-- Additional Special Offers -->
+              <h4 class="mt-4">Additional Offers:</h4>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Free Croissant with any breakfast combo</li>
+                  <li class="list-group-item">25% off on all pastries after 5 PM</li>
+                  <li class="list-group-item">Buy 2 Sandwiches, Get 1 Free!</li>
+              </ul>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Order Now</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+    
+   
+    
+  </div>
+</section>
+
+  <section class="About my-5" id="about">
+    <div class="container">
+      <div>
+        <h1 class="container text-center">About Us</h1>
+        <hr class="w-25 m-auto">
+      </div>
+      <div class="row">
+        <div class="col-sm 12 col-md 6 col-lg 6 col-12">
+          <h1>Discover OUR STORY</h1>
+          <p>At Cafe Delight, we believe that every cup of coffee tells a story. Our journey began with a simple idea:
+            to create a warm and welcoming space where people could come together to enjoy exceptional coffee, delicious
+            food, and great company. Nestled in the heart of our community, Cafe Delight is more than just a cafe; it's
+            a haven for coffee lovers, food enthusiasts, and anyone looking to savor life's simple pleasures.Cafe
+            Delight was born out of a shared passion for coffee and a love for bringing people together. Our
+            founders, a group of friends who met over their mutual love for coffee, dreamt of creating a place where
+            every visitor would feel at home. With backgrounds in culinary arts and a deep appreciation for the craft of
+            coffee-making, they set out to turn their dream into reality.We invite you to join us at Cafe Delight, where
+            every visit is an opportunity to savor the moment and create lasting memories. Whether you're a regular or a
+            first-time visitor, you'll always find a warm welcome and a delightful experience waiting for you.
+
+            Thank you for being a part of our story. We look forward to serving you soon!
+
+          </p>
+        </div>
+        <div class="col-sm 12 col-md 6 col-lg 6 col-12 m-auto text-end">
+          <img src="https://cdn.pixabay.com/photo/2024/04/03/18/55/ai-generated-8673603_640.png"
+            class="img-fluid img-thumbnail">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu my-5" id="menu">
+    <div class="container">
+      <div>
+        <h1 class="container text-center">Menu</h1>
+        <hr class="w-25 m-auto mb-4">
+      </div>
+
+
+      <div class="mb-5">
+        <h2 class="text-left">COFFEE CORNER</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2024/04/18/11/56/ai-generated-8704231_1280.png"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Hot Cappuccino</h5>
+              <p>Indulge in the classic elegance of our Hot Cappuccino, a perfect balance of rich espresso, steamed
+                milk, and a delicate layer of velvety foam.</p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2015/07/13/14/58/coffee-843278_1280.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Hot Americano</h5>
+              <p>Experience the bold and invigorating flavor of our Hot Americano. Made with our premium espresso,
+                expertly blended with hot water, this classic coffee offers a smooth and robust taste that's perfect for
+                coffee purists.</p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2019/08/19/07/27/coffee-4415622_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Hot Latte</h5>
+              <p>Indulge in the creamy perfection of our Hot Latte, each sip offers a harmonious balance of robust
+                coffee flavor and smooth, velvety texture, creating a comforting and satisfying experience.</p>
+              <p>Rs.200</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2018/04/25/06/27/coffee-3348813_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Hot Espresso</h5>
+              <p>Discover the bold flavors of our Hot Espresso, a perfect blend of rich, aromatic coffee beans brewed to
+                perfection.</p>
+              <p>Rs.300</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mb-5">
+        <h2 class="text-left">TEA BLISS</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2015/07/02/20/37/cup-829527_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Exotic Jasmine Tea</h5>
+              <p>Experience the enchanting floral aroma and delicate flavor of our Exotic Jasmine Tea. Each sip offers a
+                soothing and aromatic journey, blending the finest green tea leaves with the subtle sweetness of jasmine
+                blossoms.</p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2017/03/01/05/12/tea-cup-2107599_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Refreshing Green Tea</h5>
+              <p>Savor the delicate and grassy notes of our Refreshing Green Tea. This invigorating blend is packed with
+                antioxidants, offering a light and healthy choice that revitalizes with every sip.</p>
+              <p>Rs.300</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2017/07/28/13/12/book-2548627_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Spicy Chai Latte</h5>
+              <p>Indulge in the warm and invigorating flavors of our Spicy Chai Latte. This delightful blend combines
+                robust black tea with a symphony of spices including cinnamon, cardamom, ginger, and cloves.</p>
+              <p>Rs.175</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2015/10/07/05/47/chai-975685_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Masala Chai</h5>
+              <p>Immerse yourself in the rich and aromatic world of our Masala Chai. This traditional Indian tea is a
+                robust blend of black tea leaves infused with milk and a touch of sweetness.</p>
+              <p>Rs.100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mb-5">
+        <h2 class="text-left">SHAKE PARADISE</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2015/11/23/11/54/chocolate-smoothie-1058191_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Chocolate Shake</h5>
+              <p>Indulge in the rich and creamy goodness of our Chocolate Shake. Made with premium chocolate and milk,
+                it's topped with whipped cream and chocolate shavings for a decadent treat.</p>
+              <p>Rs.300</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2017/09/08/05/52/strawberry-2727808_960_720.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Strawberry Shake</h5>
+              <p>Enjoy the sweet and fruity flavor of our Strawberry Shake. Blended with fresh strawberries and creamy
+                milk, it's a delightful and refreshing indulgence.</p>
+              <p>Rs.275</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2020/03/07/05/18/beverage-4908765_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Oreo Shake</h5>
+              <p>Dive into the irresistible combination of cookies and cream with our Oreo Shake. Blended to perfection
+                with creamy vanilla ice cream, milk, and chunks of Oreo cookies, this shake is a delightful indulgence.
+              </p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2021/04/16/16/21/mango-6183986_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Mango Shake</h5>
+              <p>Refresh yourself with the tropical taste of our Mango Shake. Blended with ripe mangoes and creamy milk,
+                it's a fruity and delicious escape to paradise.</p>
+              <p>Rs.275</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h2 class="text-left">REFRESHING COOLERS</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2022/10/06/14/02/lemon-juice-7502776_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Classic Lemonade</h5>
+              <p>Refresh your senses with our Classic Lemonade, a timeless favorite made from freshly squeezed lemons,
+                pure water, and just the right amount of sweetness.Perfectly chilled and served over ice, this
+                invigorating drink offers a tangy yet smooth flavor that's sure to cool you down on a hot day.</p>
+              <p>Rs.100</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2023/06/07/01/27/cocktail-8045937_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Sweetened Iced Tea</h5>
+              <p>Savor the perfect balance of sweetness and refreshment with our Sweetened Iced Tea. Made from
+                high-quality black tea leaves, this chilled beverage is expertly brewed and lightly sweetened to create
+                a smooth, flavorful drink that's both soothing and invigorating.</p>
+              <p>Rs.275</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img
+                src="https://media.istockphoto.com/id/1091401408/photo/caramel-iced-latte-with-whipped-cream.jpg?s=612x612&w=0&k=20&c=4dbbHejpm3dO3C7NeY8-s3rNyddGkvIorqkTEUyZ2Wg="
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Cold Brew with Caramel</h5>
+              <p>xperience a rich and indulgent twist on a coffee classic with our Cold Brew with Caramel. Our smooth,
+                slow-brewed cold brew coffee is perfectly balanced with a luscious hint of caramel, creating a
+                delightful blend of robust coffee and sweet, creamy caramel notes.
+              </p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2017/08/01/17/36/smoothie-2566835_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Pineapple Smoothie</h5>
+              <p>Dive into tropical bliss with our Pineapple Smoothie, a vibrant and refreshing drink made from ripe,
+                juicy pineapples blended to perfection. Each sip delivers a burst of sweet and tangy flavors, enhanced
+                by a creamy texture that's both invigorating and satisfying.</p>
+              <p>Rs.275</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5">
+        <h2 class="text-left">SNACKS & BITES</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2019/03/21/14/31/dessert-4071142_1280.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Special Pastry</h5>
+              <p>Indulge in our classic French pastry baked to perfection. Each pastry boasts a
+                flaky, buttery exterior and a soft, airy interior that melts in your mouth. Perfectly soft and
+                irresistibly delicious, it's an ideal treat for breakfast or a delightful snack any time of day.</p>
+              <p>Rs.300</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2017/03/27/14/20/cupcakes-2179039_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Muffin</h5>
+              <p>Enjoy the simple pleasure of our classic Muffin, a moist and tender treat that's perfect for any time
+                of day. Each muffin is baked to golden perfection, offering a delightful texture that's both fluffy and
+                satisfying. </p>
+              <p>Rs.275</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2019/11/19/18/33/sandwich-4638226_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Classic Club Sandwich</h5>
+              <p>Savor the timeless delight of our Classic Club Sandwich, a triple-decker masterpiece layered with
+                tender roasted turkey, crispy bacon, fresh lettuce, juicy tomatoes, and creamy mayo.</p>
+              <p>Rs.250</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-3">
+              <img src="https://cdn.pixabay.com/photo/2022/02/12/21/22/toast-7009956_640.jpg"
+                class="img-fluid img-thumbnail fixed-size-img">
+              <h5>Avocado Toast</h5>
+              <p>ndulge in the creamy goodness of our Avocado Toast, a modern favorite made with ripe, mashed avocados spread generously over toasted artisanal bread. </p>
+              <p>Rs.275</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Order" id="order">
+    <div class="container">
+      <div>
+        <h1 class="container text-center">Order Online</h1>
+        <hr class="w-25 m-auto mb-4">
+      </div>
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputName4" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputName4">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPhone4" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="inputPhone4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <input type="text" class="form-control" id="inputState">
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        
+        <div class="container">
+          <div class="col-md-6">
+              <label for="inputItem" class="form-label">Item</label>
+      
+              <select id="inputItem" class="form-select">
+                  <option selected disabled>Choose...</option>
+                  <option value="250">Hot Cappuccino - Rs.250</option>
+                  <option value="250">Hot Americano - Rs.250</option>
+                  <option value="200">Hot Latte - Rs.200</option>
+                  <option value="300">Hot Espresso - Rs.300</option>
+                  <option value="250">Exotic Jasmine Tea - Rs.250</option>
+                  <option value="300">Refreshing Green Tea - Rs.300</option>
+                  <option value="175">Spicy Chai Latte - Rs.175</option>
+                  <option value="100">Masala Chai - Rs.100</option>
+                  <option value="300">Chocolate Shake - Rs.300</option>
+                  <option value="275">Strawberry Shake - Rs.275</option>
+                  <option value="250">Oreo Shake - Rs.250</option>
+                  <option value="275">Mango Shake - Rs.275</option>
+                  <option value="100">Classic Lemonade - Rs.100</option>
+                  <option value="275">Sweetened Iced Tea - Rs.275</option>
+                  <option value="250">Cold Brew with Caramel - Rs.250</option>
+                  <option value="275">Pineapple Smoothie - Rs.275</option>
+                  <option value="300">Special Pastry - Rs.300</option>
+                  <option value="275">Muffin - Rs.275</option>
+                  <option value="250">Classic Club Sandwich - Rs.250</option>
+                  <option value="275">Avocado Toast - Rs.275</option>
+              </select>
+      
+              <button class="sort-button btn btn-warning" onclick="sortItemsByPrice()">Sort by Price</button>
+          </div>
+      </div>
+      
+        <div class="col-md-6">
+          <label for="inputQuantity4" class="form-label">Quantity</label>
+          <input type="number" class="form-control" min="1" id="inputQuantity4">
+        </div>
+        <div class="col-md-6">
+          <label for="totalAmount" class="form-label">Total Amount</label>
+          <input type="text" class="form-control" id="totalAmount" readonly>
+        
+        </div>
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-warning" onclick="calculateTotal()">Calculate Total</button>
+        </div>
+        <div class="col-12 text-center">
+          <input type="submit" class="btn btn-warning" value="Place Order"></input>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact my-5" id="contact">
+    <div class="container">
+      <div>
+        <h1 class="container text-center">Contact Us</h1>
+        <hr  class="w-25 m-auto mb-5">
+      </div>
+      <div class="row">
+        <div class="col-sm 12 col-md 6 col-lg 6 col-12">
+          <h2>Feel free to connect with us.</h2><br>
+          <p>We'd love to hear from you! Whether you have a question about our menu, feedback on your experience, or
+            just want to say hello, feel free to reach out to us. Our team is always here to help and ensure you have
+            the best possible experience with our cafe.</p><br>
+          <h5>Contact Information</h5><br>
+          <p>Address:&nbsp; 123 Cafe Delight, VIC 3000, Delhi</p>
+          <br>
+          <p>Tel:&nbsp; 010-020-0340</p>
+          <br>
+          <p>Email: &nbsp;contact@cafedelight.com</p>
+
+
+        </div>
+        <div class="col-sm 12 col-md 6 col-lg 6 col-12  text-left">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea><br>
+            <div class="col-12 text-center">
+              <input type="submit" class="btn btn-warning" value="Send Message"></input>
+            </div>
+          </div>
+        </div>
+        </section>
+  <footer>
+    <center>
+      <p> &copy;2024 | CAFE DELIGHT | All Rights Reserved.</p>
+    </center>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+  
+
+    <script> function calculateTotal() {
+  const itemSelect = document.getElementById('inputItem');
+  const quantityInput = document.getElementById('inputQuantity4');
+  const totalInput = document.getElementById('totalAmount');
+
+
+  const selectedItem = String(itemSelect.value);
+  const quantity = quantityInput.value;
+
+  const itemPrices = {
+  "Hot Cappuccino": 250,
+  "Hot Americano": 250,
+  "Hot Latte": 200,
+ "Hot Espress": 300,
+  "Exotic Jasmine Tea": 250,
+  "Refreshing Green Tea" : 300,
+  "Spicy Chai Latte" :175,  
+  "Masala Chai" : 100,
+  "Chocolate Shake" : 300,
+  "Strawberry Shake" : 275,
+  "Oreo Shake" : 250,
+  "Mango Shake" : 275,
+  "Classic Lemonade" : 100,
+  "Sweetened Iced Tea" : 275,
+  "Cold Brew with Caramel" : 250,
+  "Pineapple Smoothie" : 275,
+  "Special Pastry" : 300,
+  "Muffin" : 275,
+  "Classic Club Sandwich" : 250,
+  "Avocado Toast" : 275,
+  };
+
+  // console.log(selectedItem.slice(0,selectedItem.indexOf("-")) ); // Add this line for debugging   
+
+  const itemPrice = itemPrices[selectedItem.slice(0,selectedItem.indexOf("-"))];
+  // console.log(itemPrice);
+  if (itemPrice) {
+    const totalAmount = itemPrice * quantity;
+    totalInput.value = totalAmount;
+  } else {
+    // Handle invalid item case
+    console.error("Invalid item selected:", selectedItem);
+    totalInput.value = "Invalid Item";
+  }
+}
+</script>
+ 
+<script>
+    function sortItemsByPrice() {
+        const selectElement = document.getElementById('inputItem');
+        const options = Array.from(selectElement.options).slice(1); // Exclude the "Choose..." option
+        
+        // Sort the options based on the price (Rs.XXX)
+        options.sort((a, b) => {
+            const priceA = parseInt(a.textContent.match(/Rs\.(\d+)/)[1]);
+            const priceB = parseInt(b.textContent.match(/Rs\.(\d+)/)[1]);
+            return priceA - priceB; // Ascending order
+        });
+
+        // Clear the current options and add the sorted ones
+        selectElement.innerHTML = '<option selected>Choose...</option>'; // Add the "Choose..." option back
+        options.forEach(option => selectElement.appendChild(option));
+    }
+</script>
+
+<script>
+  // Set the offer end date and time
+  const offerEndDate = new Date("Oct 31, 2024 23:59:59").getTime();
+
+  // Update the countdown every second
+  const countdownInterval = setInterval(function() {
+      const now = new Date().getTime();
+      const timeRemaining = offerEndDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Display the result
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      // If the countdown is finished, display a message
+      if (timeRemaining < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown-timer").innerHTML = "Offer Expired";
+      }
+  }, 1000);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

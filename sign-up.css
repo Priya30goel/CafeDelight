@@ -1,0 +1,60 @@
+/* sign-up.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('cafe2.avif'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #2d080830;/* White background with some transparency */
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #f1ecec;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f1ecec;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8c94d;
+    color: rgb(10, 9, 9);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.signup-form button:hover {
+    background-color: #ffff05;
+    
+}
